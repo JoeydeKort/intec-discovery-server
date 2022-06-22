@@ -1,0 +1,11 @@
+server.port: 8080
+spring.application.name: discovery
+
+eureka:
+  server:
+    evictionIntervalTimerInMs: 3000
+    response-cache-update-interval-ms: 3000
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url.defaultZone: http://discovery:${server.port}/eureka
